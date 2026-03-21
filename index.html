@@ -1,0 +1,177 @@
+index.html
+Learn-way_informatioLearn-way_informationn<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>런웨이 LMS</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background: #0b0b0f;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    section {
+      padding: 120px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      background: radial-gradient(circle at top, #6c5cff, #0b0b0f);
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, #6c5cff, #9a8cff);
+      border-radius: 10px;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(108,92,255,0.6);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 24px;
+      border-radius: 16px;
+      transition: 0.4s;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 40px rgba(108,92,255,0.3);
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .highlight {
+      color: #9a8cff;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero fade-up">
+  <h1>AI 기반 LMS 플랫폼</h1>
+  <p>런웨이 + 큐피트로 교육 운영을 완전히 자동화하세요</p>
+  <a href="#" class="btn">데모 요청</a>
+</section>
+
+<!-- 문제 -->
+<section class="fade-up">
+  <h2>이런 고민 있으시죠?</h2>
+  <div class="grid">
+    <div class="card">교육 과정이 많아 찾기 어려움</div>
+    <div class="card">운영 관리 리소스 과다</div>
+    <div class="card">성과 측정 불가능</div>
+  </div>
+</section>
+
+<!-- 해결 -->
+<section class="fade-up">
+  <h2><span class="highlight">런웨이</span>가 해결합니다</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>통합 LMS</h3>
+      <p>과정, 차수, 운영을 하나로 관리</p>
+    </div>
+    <div class="card">
+      <h3>운영 자동화</h3>
+      <p>수강/평가/승인 자동 처리</p>
+    </div>
+    <div class="card">
+      <h3>데이터 분석</h3>
+      <p>교육 효과를 한눈에 확인</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI -->
+<section class="fade-up">
+  <h2>AI 큐피트</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>AI 추천</h3>
+      <p>자연어 기반 강의 추천</p>
+    </div>
+    <div class="card">
+      <h3>LRS 분석</h3>
+      <p>학습 패턴 기반 분석</p>
+    </div>
+    <div class="card">
+      <h3>자동 메타데이터</h3>
+      <p>콘텐츠 자동 분석</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="hero fade-up">
+  <h1>지금 도입하세요</h1>
+  <p>대기업 / 금융권 LMS 구축 경험 기반</p>
+  <a href="#" class="btn">문의하기</a>
+</section>
+
+<!-- SCRIPT -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-up').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
